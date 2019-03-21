@@ -5,6 +5,7 @@ class Student
   #  with DB[:conn]
   def self.db
     @db = DB[:conn]
+  end
 
 
   def initialize(name, db)

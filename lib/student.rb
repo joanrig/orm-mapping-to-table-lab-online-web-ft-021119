@@ -37,6 +37,7 @@ class Student
   end
 
   def self.create(attributes)
+  end
 
 
 end

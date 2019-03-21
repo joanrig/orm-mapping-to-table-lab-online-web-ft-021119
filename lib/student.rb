@@ -8,6 +8,8 @@ class Student
   end
 
   def initialize
+    @name = name
+    @grade = grade
   end
 
   def self.create_table

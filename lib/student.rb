@@ -38,6 +38,7 @@ class Student
     attributes.each do |attribute, value|
       self.attribute.to_k = "value"
     end
+    self.save
   end
 
 

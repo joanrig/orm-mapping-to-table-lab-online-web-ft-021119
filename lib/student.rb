@@ -7,7 +7,7 @@ class Student
     @db = DB[:conn]
   end
 
-  def initialize(name=nil, grade=nil)
+  def initialize(name, grade)
     @name = name
     @grade = grade
   end
@@ -35,10 +35,8 @@ class Student
   end
 
   def self.create(name:, grade:)
-    
-      binding.pry
-    end
-    self.save
+    student = Student.new(name, grade)
+    student.save
   end
 
 

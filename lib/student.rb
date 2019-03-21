@@ -34,10 +34,9 @@ class Student
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
   end
 
-  def self.create
-    self.new(attributes)
+  def self.create(attributes)
     attributes.each do |key, value|
-      self.send("#{key.to_sym}", value)
+      self.new.send("#{key.to_sym}", value)
     end
     self.save
   end

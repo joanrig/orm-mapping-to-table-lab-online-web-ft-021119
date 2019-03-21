@@ -35,6 +35,9 @@ class Student
   end
 
   def self.create(attributes)
+    attributes.each do |attribute, value|
+      self.attribute.to_k = "value"
+    end
   end
 
 

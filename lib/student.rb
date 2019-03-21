@@ -7,7 +7,7 @@ class Student
     @db = DB[:conn]
   end
 
-  def initialize
+  def initialize(name, grade)
     @name = name
     @grade = grade
   end

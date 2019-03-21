@@ -35,8 +35,8 @@ class Student
   end
 
   def self.create(attributes)
-    attributes.each do |attribute, value|
-      self.attribute.to_k = "value"
+    attributes.each do |key, value|
+      self.send("#{key.to_sym}=", value)
     end
     self.save
   end
